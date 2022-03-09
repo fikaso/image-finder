@@ -11,6 +11,7 @@ export const ImageStyled = styled.div`
       props.hover &&
       !props.modalActive &&
       css`
+        transition: 0.1s;
         opacity: 0.5;
       `};
   }

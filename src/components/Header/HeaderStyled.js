@@ -8,6 +8,7 @@ export const HeaderStyled = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2rem;
 
   @media (min-width: 450px) {
     flex-direction: row;

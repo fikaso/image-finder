@@ -4,6 +4,16 @@ import { HeartIcon as HeartSolid } from '@heroicons/react/solid';
 
 export const ActionsStyled = styled.div`
   z-index: 100;
+  animation: fadeInAnimation 0.1s;
+
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;
 
 export const DislikeIcon = styled(HeartSolid)`

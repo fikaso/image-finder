@@ -21,7 +21,7 @@ export const Container = styled.div`
 
 export const CloseIcon = styled(XIcon)`
   cursor: pointer;
-  width: 15px;
+  width: 25px;
   position: absolute;
   top: 10px;
   right: 10px;
