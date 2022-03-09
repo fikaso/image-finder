@@ -12,7 +12,7 @@ function ImagesGrid({ images }) {
 
   return (
     <>
-      <ImagesGridStyled>
+      <ImagesGridStyled activeImage={activeImage}>
         {images.map((image) => (
           <Image image={image} key={image.id} />
         ))}

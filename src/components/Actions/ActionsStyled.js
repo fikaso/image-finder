@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import { ArrowsExpandIcon, HeartIcon } from '@heroicons/react/outline';
 import { HeartIcon as HeartSolid } from '@heroicons/react/solid';
 
-export const ActionsStyled = styled.div``;
+export const ActionsStyled = styled.div`
+  z-index: 100;
+`;
 
 export const DislikeIcon = styled(HeartSolid)`
   cursor: pointer;
@@ -11,7 +13,7 @@ export const DislikeIcon = styled(HeartSolid)`
   left: 50%;
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
-  z-index: 2;
+  z-index: 1;
   width: 30%;
 `;
 export const LikeIcon = styled(HeartIcon)`
@@ -20,7 +22,7 @@ export const LikeIcon = styled(HeartIcon)`
   left: 50%;
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
-  z-index: 2;
+  z-index: 1;
   width: 30%;
 `;
 
@@ -30,6 +32,6 @@ export const ExpandIcon = styled(ArrowsExpandIcon)`
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 2;
+  z-index: 1;
   width: 25px;
 `;

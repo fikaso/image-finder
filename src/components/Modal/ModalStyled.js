@@ -7,6 +7,7 @@ export const ModalStyled = styled.div`
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
   background-color: white;
+  z-index: 100;
 `;
 
 export const Container = styled.div`
