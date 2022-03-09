@@ -5,6 +5,7 @@ export const ModalStyled = styled.div`
   position: fixed;
   top: 50%;
   left: 50%;
+  border-radius: 1rem;
   transform: translate3d(-50%, -50%, 0);
   background-color: white;
   z-index: 100;
