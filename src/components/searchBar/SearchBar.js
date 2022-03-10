@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { getImages, selecLastSearch } from '../../redux/ImagesSlice';
+import { debounce } from 'lodash';
+
 function SearchBar() {
   const lastSearch = useSelector(selecLastSearch);
   const [text, setText] = useState(lastSearch ?? '');
@@ -15,13 +17,16 @@ function SearchBar() {
     dispatch(getImages(text));
   }, [dispatch, text, lastSearch]);
 
+  const handleText = debounce((value) => {
+    setText(value);
+  }, 400);
+
   return (
     <SearchBarStyled>
       <SearchIconStyled />
       <input
-        onChange={(e) => setText(e.target.value)}
+        onChange={(e) => handleText(e.target.value)}
         type="text"
-        value={text}
         placeholder="Search Image"
       />
     </SearchBarStyled>
