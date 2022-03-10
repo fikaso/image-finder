@@ -93,7 +93,6 @@ export const imagesSlice = createSlice({
       state.status = 'getSuccess';
     },
     [getImages.rejected]: (state) => {
-      console.log('getRejected');
       state.status = 'getFailed';
     },
   },
