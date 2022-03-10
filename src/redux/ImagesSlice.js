@@ -10,7 +10,12 @@ export const getImages = createAsyncThunk(
       url = `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}`;
     }
     const response = await fetch(url);
-    return response.json();
+    const data = await response.json();
+    if (data.hits.length > 0) {
+      return data;
+    } else {
+      return Promise.reject(data);
+    }
   }
 );
 
@@ -84,10 +89,11 @@ export const imagesSlice = createSlice({
           active: false,
         })
       );
-      state.status = 'getSuccess';
       state.lastSearch = action.meta.arg;
+      state.status = 'getSuccess';
     },
     [getImages.rejected]: (state) => {
+      console.log('getRejected');
       state.status = 'getFailed';
     },
   },

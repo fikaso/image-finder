@@ -19,7 +19,7 @@ function SearchBar() {
 
   const handleText = debounce((value) => {
     setText(value);
-  }, 400);
+  }, 300);
 
   return (
     <SearchBarStyled>
