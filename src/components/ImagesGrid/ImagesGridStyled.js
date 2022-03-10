@@ -10,7 +10,7 @@ export const ImagesGridStyled = styled.div`
     css`
       &::after {
         content: '';
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
